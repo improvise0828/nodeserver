@@ -11,7 +11,9 @@ const corsOptions = {
     if (whitelist.indexOf(origin) !== -1) {
       callback(null, true);
     } else {
-      callback(new Error('Not allowed by CORS'));
+      // callback(new Error('Not allowed by CORS'));
+      // 화이트 리스트를 활성화하려면 위의 주석을 제거하고 아래를 삭제
+      callback(null, true);
     }
   },
   credentials: true,
